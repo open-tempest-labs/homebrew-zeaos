@@ -3,7 +3,7 @@ class Zeaos < Formula
   homepage "https://github.com/open-tempest-labs/zeaos"
   url "https://github.com/open-tempest-labs/zeaos/archive/refs/tags/v0.1.1.tar.gz"
   sha256 "af0534bb1e8c8b29c83e2528fefb6d43fd128dfcbb956546fbece48140704cfc"
-  license "MIT"
+  license "Apache-2.0"
 
   depends_on "go" => :build
 
