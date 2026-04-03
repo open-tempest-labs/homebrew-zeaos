@@ -15,6 +15,6 @@ class Zeaos < Formula
   end
 
   test do
-    assert_match "ZeaOS", shell_output("#{bin}/zeaos --version 2>&1", 1)
+    assert_match "ZeaOS", shell_output("#{bin}/zeaos --help 2>&1")
   end
 end
