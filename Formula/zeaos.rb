@@ -1,8 +1,8 @@
 class Zeaos < Formula
   desc "Arrow-native interactive data REPL powered by DuckDB"
   homepage "https://github.com/open-tempest-labs/zeaos"
-  url "https://github.com/open-tempest-labs/zeaos/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "d393d3111d70d9b9c0d6e6a6c791d91ab31b226093faa4130ff7ace600658261"
+  url "https://github.com/open-tempest-labs/zeaos/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "af0534bb1e8c8b29c83e2528fefb6d43fd128dfcbb956546fbece48140704cfc"
   license "MIT"
 
   depends_on "go" => :build
@@ -16,5 +16,6 @@ class Zeaos < Formula
 
   test do
     assert_match "ZeaOS", shell_output("#{bin}/zeaos --help 2>&1")
+    assert_match version.to_s, shell_output("#{bin}/zeaos --version 2>&1")
   end
 end
