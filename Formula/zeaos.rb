@@ -1,8 +1,8 @@
 class Zeaos < Formula
   desc "Arrow-native interactive data REPL powered by DuckDB"
   homepage "https://github.com/open-tempest-labs/zeaos"
-  url "https://github.com/open-tempest-labs/zeaos/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "af0534bb1e8c8b29c83e2528fefb6d43fd128dfcbb956546fbece48140704cfc"
+  url "https://github.com/open-tempest-labs/zeaos/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "8ef8fc771b865ee29d62c2b0d8f9be91b2344325c944cadb68586cd27fb49978"
   license "Apache-2.0"
 
   depends_on "go" => :build
