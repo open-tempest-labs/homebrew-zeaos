@@ -7,6 +7,23 @@ class Zeaos < Formula
 
   depends_on "go" => :build
 
+  def caveats
+    <<~EOS
+      ZeaDrive (the zea:// volume mount) requires macFUSE:
+        brew install --cask macfuse
+
+      After installing macFUSE you must:
+        1. Open System Settings → Privacy & Security
+        2. Allow the macFUSE system extension
+        3. Reboot your Mac
+
+      Apple Silicon users may also need to reduce the startup security
+      policy in Recovery Mode to permit third-party kernel extensions.
+
+      Full instructions: https://github.com/open-tempest-labs/zeaos/blob/main/docs/installation.md
+    EOS
+  end
+
   def install
     system "go", "build",
       "-ldflags", "-s -w -X main.version=#{version}",
