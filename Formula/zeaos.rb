@@ -1,8 +1,8 @@
 class Zeaos < Formula
-  desc "Arrow-native interactive data REPL powered by DuckDB"
+  desc "Interactive data shell: load, explore, and publish as Apache Iceberg"
   homepage "https://github.com/open-tempest-labs/zeaos"
-  url "https://github.com/open-tempest-labs/zeaos/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "8ef8fc771b865ee29d62c2b0d8f9be91b2344325c944cadb68586cd27fb49978"
+  url "https://github.com/open-tempest-labs/zeaos/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "0b2710eb3cd496552f5b25bdf043bb39f1949edc02ee9cd29f34b3f0f9d0766a"
   license "Apache-2.0"
 
   depends_on "go" => :build
@@ -26,6 +26,7 @@ class Zeaos < Formula
 
   def install
     system "go", "build",
+      "-tags", "duckdb_arrow",
       "-ldflags", "-s -w -X main.version=#{version}",
       "-o", bin/"zeaos",
       "./cmd/zeaos"
