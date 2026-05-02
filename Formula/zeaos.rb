@@ -1,8 +1,8 @@
 class Zeaos < Formula
   desc "Interactive data shell: load, explore, and publish as Apache Iceberg"
   homepage "https://github.com/open-tempest-labs/zeaos"
-  url "https://github.com/open-tempest-labs/zeaos/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "0b2710eb3cd496552f5b25bdf043bb39f1949edc02ee9cd29f34b3f0f9d0766a"
+  url "https://github.com/open-tempest-labs/zeaos/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "b85fa58304d7d973a8d4ead5828c82921fed49dcb1f40eee8dc1b46c2925b28b"
   license "Apache-2.0"
 
   depends_on "go" => :build
